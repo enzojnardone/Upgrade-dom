@@ -20,6 +20,7 @@ document.body.appendChild(newDiv2);
 let newDiv3 = document.createElement('div')
 for (let i = 0; i < 6; i++) {
     let newParr = document.createElement ('p')
+    // newParr.innerHTML = 'Nuevo elemento "p"'
     newDiv3.appendChild(newParr)
 };
 document.body.appendChild(newDiv3);
@@ -34,12 +35,26 @@ document.body.appendChild(newParr2)
 
 // 2.5 Inserta en el h2 con la clase .fn-insert-here el texto 'Wubba Lubba dub dub'.
 
-// document.getElementById('fn-insert-here').innerHTML='Wubba Lubba dub dub'; ??????????
+let textH2 = document.querySelector('.fn-insert-here');
+textH2.innerHTML = 'Wubba Lubba dub du'
 
 // 2.6 Basandote en el siguiente array crea una lista ul > li con los textos del array.
-// const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter'];
+const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter'];
+
+const appLists = document.createElement('ul')
+for (const app of apps) {
+    let newApp = document.createElement('li');
+    newApp.innerHTML = app;
+    appLists.appendChild(newApp);
+};
+// document.body.appendChild(appLists);
 
 // 2.7 Elimina todos los nodos que tengan la clase .fn-remove-me
+
+const removeElement = document.querySelectorAll('.fn-remove-me')
+for (const i of removeElement) {
+    document.body.removeChild(i)
+};
 
 // 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div. 
 // 	Recuerda que no solo puedes insertar elementos con .appendChild.
