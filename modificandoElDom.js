@@ -35,7 +35,7 @@ document.body.appendChild(newParr2)
 
 // 2.5 Inserta en el h2 con la clase .fn-insert-here el texto 'Wubba Lubba dub dub'.
 
-let textH2 = document.querySelector('.fn-insert-here');
+let textH2 = document.querySelector('h2.fn-insert-here');
 textH2.innerHTML = 'Wubba Lubba dub du'
 
 // 2.6 Basandote en el siguiente array crea una lista ul > li con los textos del array.
@@ -60,3 +60,11 @@ for (const i of removeElement) {
 // 	Recuerda que no solo puedes insertar elementos con .appendChild.
 
 // 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here
+
+const insertNewElement = document.querySelectorAll('div.fn-insert-here')
+
+for (i = 0; i < insertNewElement.length; i++) {
+    let newText = document.createElement("p");
+    newText.innerText = "Voy dentro!";
+    insertNewElement[i].appendChild(newText);
+};
