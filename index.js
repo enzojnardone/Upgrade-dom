@@ -1,4 +1,4 @@
-console.log('JS DOM');
+console.log('Interacción con el DOM');
 
 // **Iteración #1: Interacción con el DOM**
 
